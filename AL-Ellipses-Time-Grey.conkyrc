@@ -50,13 +50,13 @@ xftalpha = 0,
 default_color = '#676767',
 uppercase = false,
 
-lua_load = '$HOME/.config/conky/LUA/clock-dots-grey.lua',
-lua_draw_hook_pre = 'draw_clock',
+--lua_load = '$HOME/.config/conky/LUA/clock-dots-grey.lua',
+--lua_draw_hook_pre = 'draw_clock',
 
 };
 
 conky.text = [[
-${image $HOME/.config/conky/images/bl-flame-ellipses-grey.png}
+${image $HOME/.config/conky/images/al1.png -s 200x200}
 ${voffset 197}${alignr}${time %d}
 ${alignr}${time %B}
 ${alignr}${time %A}

@@ -1,1 +1,1 @@
-conky -c $HOME/.config/conky/CB-Right.conkyrc & sleep 1s
+conky -c /home/erik/.config/conky/AL-Text.conkyrc & sleep 1s

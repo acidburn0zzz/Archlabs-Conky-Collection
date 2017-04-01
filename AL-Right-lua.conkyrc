@@ -140,25 +140,25 @@ double_buffer = true,
 --##  LUA Settings  ##############################
 --# Above and After TEXT - requires a composite manager or blinks.
 --#
--- lua_load /media/5/Conky/LUA/draw-bg.lua
+--lua_load /media/5/Conky/LUA/draw-bg.lua
 
-${lua conky_draw_bg 125 0 0 0 0 0x000000 0.2}
+--${lua conky_draw_bg 125 0 0 0 0 0x000000 0.2}
 
-${lua conky_draw_bg corner_radius x_position y_position width height color alpha}
+--${lua conky_draw_bg corner_radius x_position y_position width height color alpha}
 --##
 --## OR Both above TEXT (No composite manager required - no blinking!)
 --#
 --#--------------------------------
-lua_load $HOME/.config/conky/LUA/draw-bg.lua
+--lua_load $HOME/.config/conky/LUA/draw-bg.lua
 --lua_draw_hook_pre draw_bg 15 0 0 0 0 0xffffff 0.05
-lua_draw_hook_pre draw_bg 15 0 0 0 0 0x656667 0.35
+--lua_draw_hook_pre draw_bg 15 0 0 0 0 0x656667 0.35
 --lua_draw_hook_pre draw_bg 15 0 0 0 0 0x000000 0.25
 --
 -- TEXT
 --${lua conky_draw_bg 10 0 0 0 0 0x000000 0.2}
 --############################ End LUA Settings ###
 
-update_interval 1
+update_interval = 1,
 };
 
 conky.text = [[

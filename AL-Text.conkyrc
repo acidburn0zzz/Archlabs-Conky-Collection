@@ -36,12 +36,12 @@ own_window_title = 'ARCHLabs Branding Conky',
 --## Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
 -- own_window_argb_value 0
 
-minimum_width = 454, 
-minimum_height = 207,
---maximum_width 180
+minimum_width = 200, 
+minimum_height = 200,
+maximum_width = 200,
 
-gap_x = -455,--## l|r
-gap_y = -203,--## u|d
+gap_x = 0,--## l|r
+gap_y = 0,--## u|d
 
 alignment = 'middle_middle',
 --######################  End Window Settings  ###
@@ -121,5 +121,5 @@ update_interval = 1,
 };
 
 conky.text = [[
-${image $HOME/.config/conky/images/al2.png}
+${image $HOME/.config/conky/images/al2.png -s 200x200}
 ]];
