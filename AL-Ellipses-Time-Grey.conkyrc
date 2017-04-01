@@ -30,9 +30,9 @@ own_window_title = 'ARCHLabs Ellipse Clock Conky',
 
 double_buffer = true,
 
-minimum_width = 208, 
-minimum_height = 274,
-maximum_width = 208,
+minimum_width = 200, 
+minimum_height = 200,
+maximum_width = 200,
 
 alignment = 'middle_middle',
 gap_x = 0,
