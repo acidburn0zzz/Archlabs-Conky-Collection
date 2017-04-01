@@ -2,6 +2,6 @@
 
 
 
-Conky configs need to be placed in ~/.config/conky/ Images need to go into ~/.config/conky/images/
+Conky configs need to be placed in ~/.config/conky/
 
-A folder will need to be created for the images.
+You can select the conky's with the conky chooser.
