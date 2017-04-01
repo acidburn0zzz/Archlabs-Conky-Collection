@@ -30,9 +30,9 @@ own_window_title = 'ARCHLabs Ellipse Clock Conky',
 
 double_buffer = true,
 
-minimum_width = 200, 
-minimum_height = 200,
-maximum_width = 200,
+minimum_width = 208, 
+minimum_height = 274,
+maximum_width = 208,
 
 alignment = 'middle_middle',
 gap_x = 0,
@@ -50,14 +50,14 @@ xftalpha = 0,
 default_color = '#676767',
 uppercase = false,
 
---lua_load = '$HOME/.config/conky/LUA/clock-dots-grey.lua',
---lua_draw_hook_pre = 'draw_clock',
+lua_load = '$HOME/.config/conky/lua/clock-dots-grey.lua',
+lua_draw_hook_pre = 'draw_clock',
 
 };
 
 conky.text = [[
-${image $HOME/.config/conky/images/al1.png -s 200x200}
-${voffset 197}${alignr}${time %d}
+${image $HOME/.config/conky/images/flatALlogo.png -s 150x150}
+${voffset 100}${alignr}${time %d}
 ${alignr}${time %B}
 ${alignr}${time %A}
 ]];
