@@ -1,1 +1,1 @@
-conky -c ~/.config/conky/AL-Text.conkyrc & sleep 1s
+conky -c ~/.conkyrc & sleep 1s
