@@ -12,6 +12,7 @@ conky.config = {
 -- Enjoy! :)
 
 -- converted to conky 1.10 syntax for ARCHLabs by: postmaster
+-- original config borrowed from BunsenLabs with love
 
 -- pkill -xf "conky -q -c $HOME/.config/conky/AL-Def-Cal.conkyrc" &
 --##  Begin Window Settings  #####################
