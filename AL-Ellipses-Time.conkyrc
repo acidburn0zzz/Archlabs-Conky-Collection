@@ -10,6 +10,7 @@
 -- BunsenLabs ellipses by damo <damo@bunsenlabs.org> April 2015
 
 -- converted to conky 1.10 syntax for ARCHLabs by: postmaster
+-- original config borrowed from BunsenLabs with love
 
 -- compton.conf has "shadow-exclude = [ "n:a:Conky" ];", so ellipses.conkyrc
 -- is draggable/resizable with Alt+ Lbutton/Rbutton
