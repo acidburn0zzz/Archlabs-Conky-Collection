@@ -11,6 +11,7 @@
 -- Enjoy! :)
 
 -- converted to conky 1.10 syntax for ARCHLabs by: postmaster
+-- original config borrowed from BunsenLabs with love
 
 -- pkill -xf "conky -c $HOME/.config/conky/CB-Right.conkyrc" &
 
