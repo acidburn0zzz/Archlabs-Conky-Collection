@@ -11,15 +11,13 @@
 # These conky configs tested in ARCHLabs 4.0 (Conky version 1.10)
 
 # How to use
-#1. make sure you have curl and jq packages. you don't have? install it by open terminal and type 'sudo pacman -S curl jq'
-#2. make sure you have roboto font. you don't have? install it by 'sudo pacman -S ttf-roboto' , something goes wrong? try 'yaourt -S ttf-roboto-font'
-#3. enable 'view hidden files' in your file manager, press ctrl+h
-#4. extract this archive to your home folder, you should have '.weather-icons folder' in your home and 'Mess' folder in ~/.config/conky
-#5. in the Mess folder, edit one of the conkyrc file that you want to use, replace the variables.
-#6. to get API Key, first you have to sign up here https://openweathermap.org/appid
-#7. find your city id here http://openweathermap.org/help/city_list.txt
-#8. after you replace those variables with your own, save.
-#9. open the conky chooser, tick your edited conkyrc, then press OK.
+#1. make sure you have curl and jq packages. Install it via terminal and type 'sudo pacman -S curl jq'
+#2. make sure you have roboto font. Install it via terminal 'sudo pacman -S ttf-roboto'
+#3. edit one of the conky files that you want to use, replace the variables.
+#4. to get an API Key, first you have to sign up here https://openweathermap.org/appid
+#5. find your city id here http://openweathermap.org/help/city_list.txt
+#6. after you replace those variables with your own, save.
+#7. open the conky chooser, tick your edited conkyrc, then press OK.
 
 # Credits
 #1. zagortenay333 for Jelly Conky
