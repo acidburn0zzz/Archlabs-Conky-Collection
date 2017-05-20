@@ -200,6 +200,9 @@ ${execi 300 jq -r ".weather[0].description" ~/.cache/weather.json}${font}${color
 \
 ${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/weather.json).png ~/.cache/current.png}${image ~/.cache/current.png -p 0,120 -s 64x64}
 \
+${font Roboto :size=14}${color1}\
+${voffset -10}\
+${execi 300 jq -r ".name" ~/.cache/weather.json}${font}${color}
 # Here is end of code I have taken from Jelly Conky from zagortenay333
 \
 ${color2}
