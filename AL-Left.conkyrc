@@ -152,7 +152,7 @@ OS${alignr}ARCHLabs
 Host${alignr}${nodename}
 Kernel${alignr}${kernel}
 Machine${alignr}${machine}
-Updates${alignr}${execpi 600 checkupdates | wc -l}
+Updates${alignr}${execpi 600 checkupdates | wc -l} 
 
 RAM${alignr}${memmax}
 In Use${alignr}${memperc}% = ${mem}
