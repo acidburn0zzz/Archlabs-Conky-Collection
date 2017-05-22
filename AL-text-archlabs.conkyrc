@@ -110,5 +110,6 @@ conky.config = {
 };
 
 conky.text = [[
-${image $HOME/.config/conky/images/archlabs-text-white.png}
+${image $HOME/.config/conky/images/archlabs-text.png}
+#${image $HOME/.config/conky/images/archlabs-text-white.png}
 ]];
