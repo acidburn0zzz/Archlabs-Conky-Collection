@@ -48,7 +48,6 @@ use_xft = true,
 font = 'Roboto:size=11',
 total_run_times = 0,
 mpd_port = 6600,
-default_bar_size = 20,20,
 
 
 -------------------------------------
