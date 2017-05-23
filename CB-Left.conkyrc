@@ -143,7 +143,7 @@ update_interval = 1,
 
 conky.text = [[
 ${alignr}S Y S T E M    I N F O
-${membar 0}
+${hr}
 Host:${alignr}${nodename}
 Uptime:${alignr}${uptime}
 RAM:$alignr${mem} / ${memmax}
@@ -154,7 +154,7 @@ CPU Average:${alignr}${cpu cpu0}%
 
 
 ${alignr}S H O R T C U T    K E Y S
-${membar 0}
+${hr}
 Alt + F2${alignr}Run Dialog
 Alt + F3${alignr}Alt Menu
 Super + Space${alignr}Main Menu
