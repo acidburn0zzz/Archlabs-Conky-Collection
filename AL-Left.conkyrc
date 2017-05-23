@@ -143,7 +143,7 @@ update_interval = 1,
 
 conky.text = [[
 ${alignr}S Y S T E M    I N F O
-${membar 0}
+${hr}
 Up${alignr}${uptime_short}
 Date${alignr}${time %x}
 Time${alignr}${time %X}
@@ -152,7 +152,7 @@ OS${alignr}ARCHLabs
 Host${alignr}${nodename}
 Kernel${alignr}${kernel}
 Machine${alignr}${machine}
-Updates${alignr}${execpi 600 checkupdates | wc -l} 
+Updates${alignr}${execpi 600 checkupdates | wc -l} Upd
 
 RAM${alignr}${memmax}
 In Use${alignr}${memperc}% = ${mem}
@@ -165,7 +165,7 @@ LoadAvg${alignr}${loadavg}
 /HOME${alignr}${fs_free /home} / ${fs_size /home}
 
 ${alignr}S H O R T C U T   K E Y S
-${membar 0}
+${hr}
 [Alt]+F2${alignr}Run Dialog
 [Alt]+F3${alignr}Alt Menu
 [S]+Space${alignr}Main Menu
