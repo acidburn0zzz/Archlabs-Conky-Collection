@@ -133,10 +133,10 @@ conky.config = {
 
 conky.text = [[
 ${offset 00}${voffset 0}${font Distortion Dos Digital:size=16}${color3}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${color2}${offset 00}${voffset -5}${font Noto Sans:size=10:regular}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
-${color1}${offset 00}${voffset 0}${font Noto Sans:size=8:regular}${color1}Kernel : ${color2}${kernel}${offset 00}${voffset 0}${alignr}${color2}${offset 00}${voffset 0}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}${color}
-${color1}${cpubar cpu0 10,130}${color1} Cpu ${alignr}${if_match ${cpu cpu0} > 80}${color9}${else}${if_match ${cpu cpu0} > 50}${color8}${else}${color2}${endif}${endif}${cpu cpu0}%${color}
-${color1}${cpugraph 10,130 aaaaaa ffffff  -t} Cpu History${color}
-${color1}${membar 10,130} Mem ${color2}${alignr}${if_match ${memperc} > 80}${color9}${else}${color6}${endif}${color2}${memperc}%${color}
+${color1}${offset 19}${voffset 0}${font Noto Sans:size=8:regular}${color1}Kernel : ${color2}${kernel}${offset 00}${voffset 0}${alignr}${color2}${offset 00}${voffset 0}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}${color}
+${color1}${offset 19}${cpubar cpu0 10,110}${color1} Cpu ${alignr}${if_match ${cpu cpu0} > 80}${color9}${else}${if_match ${cpu cpu0} > 50}${color8}${else}${color2}${endif}${endif}${cpu cpu0}%${color}
+${color1}${offset 19}${cpugraph 10,110 aaaaaa ffffff  -t} Cpu History${color}
+${color1}${offset 19}${membar 10,110} Mem ${color2}${alignr}${if_match ${memperc} > 80}${color9}${else}${color6}${endif}${color2}${memperc}%${color}
 
 ${color2}${offset 15}${voffset 140}${font Noto Sans:size=8}CPU1 CPU2  Mem  HDD DOWN  UP
 ]]
