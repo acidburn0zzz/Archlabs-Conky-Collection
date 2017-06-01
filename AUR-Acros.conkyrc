@@ -1,9 +1,9 @@
 --[[
 #=====================================================================================
 #                               aureola
-# Date    : 29/04/2017
+# Date    : 01/06/2017
 # Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.0.1
+# Version : v1.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 # Documentation : http://erikdubois.be/category/linux/aureola/
 #======================================================================================
@@ -112,7 +112,7 @@ conky.text = [[
 ${image ~/.config/conky/images/archlabs-white.png -p 170,0 -s 60x60  -f 5}
 ${color1}${font SourceSansPro-ExtraLight:size=18:weight:bold}${color2}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}
 ${color1}${hr 2}
-${voffset -10}${color1}${font SourceSansPro-ExtraLight:size=10:weight:bold:italic}${color6}$sysname $kernel 
+${voffset -10}${color1}${font SourceSansPro-ExtraLight:size=10:weight:bold:italic}${color6}$sysname $kernel ${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ${color1}${font SourceSansPro-ExtraLight:size=12:weight:bold}Uptime ${alignr}${color6} $uptime
 ${color1}${font SourceSansPro-ExtraLight:size=12:weight:bold}Cpu Temp ${alignr}${color6}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
 ${color1}${color1}Cpu Freq ${alignr}${color6}${freq_g} Ghz
@@ -125,7 +125,7 @@ ${color1}Load${alignr}${color6}${loadavg}
 ${color1}Packages Upgrades${alignr}${color6}${execi 3600 checkupdates | wc -l} 
 ${color1}${hr 2}
 ${font SourceSansPro-ExtraLight size=12:weight:bold}${color1}CPU   
-${font SourceSansPro-ExtraLight size=8:weight:italic}${color6}${execi 6000 cat /proc/cpuinfo | grep -i 'Model name' -m 1 | cut -c14-35}
+${font SourceSansPro-ExtraLight size=8:weight:italic}${color6}${execi 6000 cat /proc/cpuinfo | grep -i 'Model name' -m 1 | cut -c14-43}
 # Showing TOP 5 CPU-consumers
 ${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color1}${top name 1}${alignr}${color6}${top cpu 1}%${font}
 ${offset 30}${color1}${top name 2}${alignr}${color6}${top cpu 2}%
@@ -167,4 +167,5 @@ ${alignr}${color1}Album : ${color6}${execi 5 dbus-send --print-reply --dest=org.
 ${else}\
 ${color6}${alignr}Offline\
 ${endif}\
+${hr}
 ]]
