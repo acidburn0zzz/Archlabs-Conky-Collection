@@ -116,9 +116,9 @@ conky.config = {
 conky.text = [[
 ${goto 12}+-----------------------------------------------------------+
 ${goto 15}|${goto 38}+-- ${color2}Node ${goto 155}${color4}${nodename}${font}${color}
-${goto 15}|${goto 38}+-- ${color2}Os${goto 155}${color4}${sysname}${color}
+${goto 15}|${goto 38}+-- ${color2}Os${goto 155}${color4}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${color}
+${goto 15}|${goto 38}+-- ${color2}Version${goto 155}${color4}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ${goto 15}|${goto 38}+-- ${color2}Kernel ${goto 155}${color4}${kernel}${color}
-${goto 15}|${goto 38}+-- ${color2}Machine${goto 155}${color4}${machine}${color}
 ${goto 15}|
 ${goto 12}${color1}+----Memory ${color}
 ${goto 15}|${goto 40}|
