@@ -19,6 +19,7 @@
 # Inked-out font : http://www.dafont.com/inked-out.font
 # Stya font : http://www.dafont.com/stya.font
 # Space age font : http://www.dafont.com/space-age.font
+# Quantify font : https://befonts.com/download/quantify-v2
 # REBOOT AFTER INSTALLING THE FONT
 #======================================================================================
 
@@ -125,7 +126,8 @@ conky.config = {
 conky.text = [[
 #${color1}${font Inked out:size=18:regular}       ARCHLabs${font}
 #${color2}${font Inked out:size=16:regular}What did you expect?${font}
-${color1}${font Bootcamp:size=100:regular}   ARCHLabs${font}
+${color1}${font Bootcamp:size=100:regular}   ArchLabs${font}
+#${color1}${font Quantify:size=80:regular}   ArchLabs${font}
 #${color1}${font Stya:size=55:regular}         ARCHLabs${font}
 #${color1}${font Space Age:size=55:regular}  ARCHLabs${font}
 ]];
