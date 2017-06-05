@@ -20,6 +20,7 @@
 # Stya font : http://www.dafont.com/stya.font
 # Space age font : http://www.dafont.com/space-age.font
 # Quantify font : https://befonts.com/download/quantify-v2
+# Jedi font : http://www.dafont.com/star-jedi.font
 # REBOOT AFTER INSTALLING THE FONT
 #======================================================================================
 
@@ -51,8 +52,8 @@ conky.config = {
 	gap_x = 0,									-- pixels between right or left border
 	gap_y = 0,									-- pixels between bottom or left border
 	minimum_height = 200,						-- minimum height of window
-	minimum_width = 600,						-- minimum height of window
-	maximum_width = 600,						-- maximum height of window
+	minimum_width = 1000,						-- minimum height of window
+	maximum_width = 1000,						-- maximum height of window
 
 	--Graphical
 
@@ -124,10 +125,13 @@ conky.config = {
 };
 
 conky.text = [[
-#${color1}${font Inked out:size=18:regular}       ARCHLabs${font}
+#${color1}${font Inked out:size=18:regular}       ARCHLabs Yoda${font}
 #${color2}${font Inked out:size=16:regular}What did you expect?${font}
-${color1}${font Bootcamp:size=100:regular}   ArchLabs${font}
+${color1}${font Bootcamp:size=100:regular}   ArchLabs  Yoda${font}
 #${color1}${font Quantify:size=80:regular}   ArchLabs${font}
-#${color1}${font Stya:size=55:regular}         ARCHLabs${font}
-#${color1}${font Space Age:size=55:regular}  ARCHLabs${font}
+#${color1}${font Stya:size=55:regular}         ARCHLabs  Yoda${font}
+#${color1}${font Space Age:size=55:regular}  ARCHLabs  Yoda${font}
+#${color1}${font Star Jedi Outline:size=55:regular}   ARCHLabs Yoda${font}
+#${color1}${font StarJedi Special Edition:size=55:regular}   ARCHLabs Yoda${font}
+#${color1}${font StarJedi:size=55:regular}   ARCHLabs Yoda${font}
 ]];
