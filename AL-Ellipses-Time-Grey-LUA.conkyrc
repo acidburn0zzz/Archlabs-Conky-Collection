@@ -32,7 +32,7 @@ own_window_title = 'ARCHLabs Ellipse Clock Conky',
 double_buffer = true,
 
 minimum_width = 208, 
-minimum_height = 274,
+minimum_height = 208,
 maximum_width = 208,
 
 alignment = 'middle_middle',
@@ -46,7 +46,7 @@ override_utf8_locale = true,
 -- Use Xft (anti-aliased font and stuff)
 use_xft = true,
 --xftfont Liberation Sans:size=12
-font = 'Sans-serif:size=12',
+font = 'Noto Sans:bold:size=12',
 xftalpha = 0,
 default_color = '#676767',
 uppercase = false,
@@ -57,7 +57,7 @@ lua_draw_hook_pre = 'draw_clock',
 };
 
 conky.text = [[
-${image $HOME/.config/conky/images/flatALlogo.png -s 150x150}
+${image $HOME/.config/conky/images/archlabs.png -s 150x150}
 ${voffset 100}${alignr}${time %d}
 ${alignr}${time %B}
 ${alignr}${time %A}

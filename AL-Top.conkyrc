@@ -36,9 +36,9 @@ own_window_title = 'ARCHLabs Top Conky',
 --## Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
 -- own_window_argb_value 50
 
-minimum_width = 870, 
+minimum_width = 900, 
 minimum_height = 0,
-maximum_width = 870,
+maximum_width = 900,
 
 gap_x = 0,--## left | right
 gap_y = 30,--## up | down
@@ -141,21 +141,22 @@ update_interval = 1,
 };
 
 conky.text = [[
-/Root ${if_match ${fs_used_perc /} < 10}  ${fs_used_perc /}\
+${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2'}}  ${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}\
+  /Root ${if_match ${fs_used_perc /} < 10}  ${fs_used_perc /}\
 ${else}${if_match ${fs_used_perc /} < 90} ${fs_used_perc /}\
 ${else}${color9}${fs_used_perc /}${color}${endif}${endif}% \
 of ${fs_size /}\
-${goto 160}/Home ${if_match ${fs_used_perc /home} < 10}  ${fs_used_perc /home}\
+${goto 280}/Home ${if_match ${fs_used_perc /home} < 10}  ${fs_used_perc /home}\
 ${else}${if_match ${fs_used_perc /home} < 90} ${fs_used_perc /home}\
 ${else}${color9}${fs_used_perc /home}${color}${endif}${endif}% \
 of ${fs_size /home}\
-${goto 320}CPU ${if_match ${cpu cpu0} < 10}  ${cpu cpu0}\
+${goto 420}CPU ${if_match ${cpu cpu0} < 10}  ${cpu cpu0}\
 ${else}${if_match ${cpu cpu0} < 100} ${cpu cpu0}\
 ${else}${color9}${cpu cpu0}${color}${endif}${endif}% @ ${freq_g}Ghz\
-${goto 460}RAM ${if_match ${memperc} < 10}  ${memperc}\
+${goto 560}RAM ${if_match ${memperc} < 10}  ${memperc}\
 ${else}${if_match ${memperc} < 100} ${memperc}\
 ${else}${color9}${memperc}${color}${endif}${endif}% of ${memmax}\
-${goto 600}Read ${diskio_read}\
-${goto 680}Write ${diskio_write}\
-${alignr}${uptime_short}
+${goto 690}Read ${diskio_read}\
+${goto 760}Write ${diskio_write}\
+${alignr}${uptime_short} \
 ]];

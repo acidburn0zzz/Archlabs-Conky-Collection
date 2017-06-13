@@ -29,15 +29,15 @@ own_window_transparent = true,
 own_window_colour = '#000000',
 own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 own_window_class = 'Conky',
-own_window_title = 'ArchHLabs Ellipse Clock Conky',
+own_window_title = 'ArchLabs Ellipse Clock Conky',
 
 double_buffer = true,
 
-minimum_width = 300, 
-minimum_height = 250,
-maximum_width = 320,
+minimum_width = 100, 
+minimum_height = 90,
+maximum_width = 100,
 
-alignment = 'middle_middle',
+alignment = 'bottom_right',
 gap_x = 0,
 gap_y = 0,
 
@@ -53,14 +53,14 @@ xftalpha = 0,
 default_color = '#2A4F77',
 uppercase = false,
 
---lua_load = '$HOME/.config/conky/LUA/clock.lua',
---lua_draw_hook_pre = 'draw_clock',
+lua_load = '~/.config/conky/lua/clock.lua',
+lua_draw_hook_pre = 'draw_clock',
 
 };
 
 conky.text = [[
-${image $HOME/.config/conky/images/archlabs.png}
-${voffset 197}${alignr}${time %A}
-${alignr}${time %d}
-${alignr}${time %B}
+#${image $HOME/.config/conky/images/archlabs.png}
+#${goto 80}${voffset 220}${time %A}
+#${goto 80}${time %d}
+#${goto 80}${time %B}
 ]];

@@ -13,17 +13,17 @@
 -- converted to conky 1.10 syntax for ARCHLabs by: postmaster
 -- original config borrowed from BunsenLabs with love
 
--- pkill -xf "conky -c $HOME/.config/conky/AL-Right-lua.conkyrc" &
+-- pkill -xf "conky -q -c $HOME/.config/conky/AL-Left.conkyrc" &
 
 conky.config = {
 --##  Begin Window Settings  #####################
 own_window = true,
-own_window_type = 'normal',
+own_window_type = 'desktop',
 own_window_transparent = true,
 own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
 own_window_colour = '#000000',
 own_window_class = 'Conky',
-own_window_title = 'ARCHLabs Default Right Conky',
+own_window_title = 'ARCHLabs Left Conky',
 
 --## ARGB can be used for real transparency
 --## NOTE that a composite manager is required for real transparency.
@@ -41,28 +41,27 @@ minimum_width = 200,
 minimum_height = 0,
 maximum_width = 200,
 
-gap_x = 20,--## left | right
-gap_y = 45,--## up | down
+gap_x = 20,-- l|r
+gap_y = 45,-- u|d
 
-alignment = 'top_right',
+alignment = 'top_left',
+--alignment = 'top_right',
 --######################  End Window Settings  ###
 --##  Font Settings  #############################
 -- Use Xft (anti-aliased font and stuff)
 use_xft = true,
-font = 'Monospace:bold:size=9',
 --xftfont Liberation Mono:bold:size=9
---xftfont Liberation Sans:size=11
-
-
+--xftfont Liberation Sans:size=10
+font = 'Sans-serif:size=10',
 
 -- Alpha of Xft font. Must be a value at or between 1 and 0 ###
 xftalpha = 1,
 -- Force UTF8? requires XFT ###
 override_utf8_locale = true,
 
-	uppercase = false,
+uppercase = false,
 --########################  End Font Settings  ###
---##  Color Settings  ############################
+--##  Colour Settings  ###########################
 draw_shades = false,--yes
 default_shade_color = '#000000',
 
@@ -83,7 +82,7 @@ color6 = '#00BFFF',-- DeepSkyBlue
 color7 = '#5F9EA0',-- CadetBlue
 color8 = '#BDB76B',-- DarkKhaki
 color9 = '#CD5C5C',-- IndianRed
---#######################  End Color Settings  ###
+--######################  End Colour Settings  ###
 --##  Borders Section  ###########################
 draw_borders = false,
 -- Stippled borders?
@@ -95,8 +94,8 @@ border_outer_margin = 0,
 border_width = 2,
 -- graph borders
 draw_graph_borders = true,--no
---default_graph_size 15 40
---######################  End Borders Section  ###
+--default_graph_size 15yes 40
+--#######################  End Borders Secton  ###
 --##  Miscellaneous Section  #####################
 -- Boolean value, if true, Conky will be forked to background when started.
 background = true,
@@ -106,9 +105,9 @@ background = true,
 -- Options: right, left or none
 use_spacer = 'none',
 
--- Default and Minimum size is 256 - needs more for single commands that
+-- Default and Minimum size is 256 needs more for single commands that
 -- "call" a lot of text IE: bash scripts
-text_buffer_size = 6144,
+--text_buffer_size 6144
 
 -- Subtract (file system) buffers from used memory?
 no_buffers = true,
@@ -138,66 +137,50 @@ double_buffer = true,
 -- temperature_unit Fahrenheit
 
 --################  End Miscellaneous Section  ###
---##  LUA Settings  ##############################
---# Above and After TEXT - requires a composite manager or blinks.
---#
---lua_load /media/5/Conky/LUA/draw-bg.lua
-
---${lua conky_draw_bg 125 0 0 0 0 0x000000 0.2}
-
---${lua conky_draw_bg corner_radius x_position y_position width height color alpha}
---##
---## OR Both above TEXT (No composite manager required - no blinking!)
---#
---#--------------------------------
---lua_load $HOME/.config/conky/LUA/draw-bg.lua
---lua_draw_hook_pre draw_bg 15 0 0 0 0 0xffffff 0.05
---lua_draw_hook_pre draw_bg 15 0 0 0 0 0x656667 0.35
---lua_draw_hook_pre draw_bg 15 0 0 0 0 0x000000 0.25
---
--- TEXT
---${lua conky_draw_bg 10 0 0 0 0 0x000000 0.2}
---############################ End LUA Settings ###
 
 update_interval = 1,
+
 };
 
 conky.text = [[
-${font Monospace:bold:size=10}${alignc}${color5}${time %X}
-${goto 27}${color1}${execpi 7200 LAR=`date +%-d`; cal -1 -s | sed 's/\<'$LAR'\>/${color5}&${color1}/' | sed ':a;N;$!ba;s/\n/\n${goto 27}/g'}${color}${font}
-${alignc}S Y S T E M    I N F O
+${alignr}S Y S T E M    I N F O
 ${hr}
-Host:${alignr}${nodename}
-Uptime:${alignr}${uptime}
+Up${alignr}${uptime_short}
+Date${alignr}${time %x}
+Time${alignr}${time %X}
 
-${goto 60}Used${alignr}Size
-Root${goto 60}${fs_used /}${alignr}${fs_size /}
-Home${goto 60}${fs_used /home}${alignr}${fs_size /home}
+OS${alignr}ARCHLabs
+Host${alignr}${nodename}
+Kernel${alignr}${kernel}
+Machine${alignr}${machine}
+Updates${alignr}${execpi 600 checkupdates | wc -l} Upd
 
-${goto 60}MEM${alignr}MAX
-RAM${goto 60}${mem}${alignr}${memmax}
-Swap${goto 60}${swap}${alignr}${swapmax}
+RAM${alignr}${memmax}
+In Use${alignr}${memperc}% = ${mem}
+Swap${alignr}${swap} of ${swapmax}
 
-CPU:${goto 60}Used${alignr}GHz
-Avg${goto 60}${if_match ${cpu cpu0}<10}${color1}00${color}${cpu cpu0}\
-${else}${if_match ${cpu cpu0}<100}${color1}0${color}${cpu cpu0}\
-${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}
+CPU${alignr}${cpu cpu0}% @ ${freq_g}GHz
+LoadAvg${alignr}${loadavg}
 
-${alignc}S H O R T C U T    K E Y S
+/ROOT${alignr}${fs_free /} / ${fs_size /}
+/HOME${alignr}${fs_free /home} / ${fs_size /home}
+
+${alignr}S H O R T C U T   K E Y S
 ${hr}
-[Alt] + F2${alignr}Run Dialog
-[Alt] + F3${alignr}Alt Menu
-[S] + Space${alignr}Main Menu
-[S] + Tab${alignr}Client Menu
-[S] + t${alignr}Terminal
-[S] + f${alignr}File Manager
-[S] + e${alignr}Editor
-[S] + m${alignr}Media Player
-[S] + w${alignr}Web Browser
-[S] + h${alignr}Task Manager
-[S] + l${alignr}Lock Screen
-[S] + v${alignr}Volume Control
-[S] + x${alignr}Logout
-[PrtSc]${alignr}Screenshot
-
+[Alt]+F2${alignr}Run Dialog
+[Alt]+F3${alignr}Alt Menu
+[S]+Space${alignr}Main Menu
+[S]+Tab${alignr}Client Menu
+[S]+t${alignr}Terminal
+[S]+f${alignr}File Manager
+[S]+e${alignr}Editor
+[S]+m${alignr}Media Player
+[S]+w${alignr}Web Browser
+[S]+h${alignr}Task Manager
+[S]+l${alignr}Lock Screen
+[S]+v${alignr}Volume Control
+[S]+x${alignr}Logout
+{PrtSc}${alignr}Screenshot
+${hr}
+${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ]];
