@@ -29,7 +29,7 @@ own_window_transparent = true,
 own_window_colour = '#000000',
 own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 own_window_class = 'Conky',
-own_window_title = 'ARCHLabs Ellipse Clock Conky',
+own_window_title = 'ArchHLabs Ellipse Clock Conky',
 
 double_buffer = true,
 
@@ -59,7 +59,7 @@ uppercase = false,
 };
 
 conky.text = [[
-${image $HOME/.config/conky/images/al.png}
+${image $HOME/.config/conky/images/archlabs.png}
 ${voffset 197}${alignr}${time %A}
 ${alignr}${time %d}
 ${alignr}${time %B}
