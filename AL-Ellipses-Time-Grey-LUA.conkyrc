@@ -9,7 +9,7 @@
 
 -- BunsenLabs ellipses by damo <damo@bunsenlabs.org> April 2015
 
--- converted to conky 1.10 syntax for ARCHLabs by: postmaster
+-- converted to conky 1.10 syntax for ArchLabs by: postmaster
 -- original config borrowed from BunsenLabs with love
 
 -- compton.conf has "shadow-exclude = [ "n:a:Conky" ];", so ellipses.conkyrc
@@ -27,7 +27,7 @@ own_window_transparent = true,
 own_window_colour = '#000000',
 own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 own_window_class = 'Conky',
-own_window_title = 'ARCHLabs Ellipse Clock Conky',
+own_window_title = 'ArchLabs Ellipse Clock Conky',
 
 double_buffer = true,
 

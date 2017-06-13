@@ -19,6 +19,10 @@ Possible command
 	cp conky-sessionfile ~/.config/conky/
 
 
+Better use the script that is inside your openbox configuration folder
+
+	~/.config/openbox/scripts
+
 Usage : 
 
 You can select the conky's then later with the conky chooser.
