@@ -243,7 +243,7 @@ ${color0}PrtSc$alignr${color1} Screenshot
 # End of classic conky
 
 # Here is code I have taken from Workspace Indicator by from aresgon
-${goto 100}${font Droid Sans :size=25}${if_match ${desktop}==1}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==2}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==3}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==4}${color0}${endif}•${color1}
+${goto 100}${font Droid Sans :size=25}${if_match ${desktop}==1}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==2}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==3}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==4}${color0}${endif}•${color1}${font}
 # Here is end of code I have taken from Workspace Indicator by from aresgon
 ${hr}
 ${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
