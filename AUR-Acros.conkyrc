@@ -109,7 +109,7 @@ conky.config = {
 
 
 conky.text = [[
-${image ~/.config/conky/images/archlabs-white.png -p 170,0 -s 60x60  -f 5}
+${image ~/.config/conky/images/archlabs.png -p 170,0 -s 60x60  -f 5}
 ${color1}${font SourceSansPro-ExtraLight:size=18:weight:bold}${color2}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}
 ${color1}${hr 2}
 ${voffset -10}${color1}${font SourceSansPro-ExtraLight:size=10:weight:bold:italic}${color6}$sysname $kernel ${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
