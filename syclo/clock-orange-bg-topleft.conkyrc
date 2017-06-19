@@ -34,7 +34,7 @@ own_window_title = 'ARCHLabs Top Conky',
 -- own_window_argb_value 50
 
 minimum_width = 400, 
-minimum_height = 400,
+minimum_height = 240,
 maximum_width = 400,
 
 gap_x = 0,--## left | right
