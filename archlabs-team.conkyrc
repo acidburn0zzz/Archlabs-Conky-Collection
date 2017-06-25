@@ -156,7 +156,7 @@ ${lua imlib_clock grey 130 71 350 3 4}
 ${voffset 24}${offset 150}${font Roboto Condensed:size=12}${color 616161}Australia${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color 616161}${time %A}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color 616161}${time %e}.${time %m}.${time %Y}${font}
-${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color 8D8D8D}${tztime Australia/NSW %H:%M:%S} ${time %p}${font}
+${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color 8D8D8D}${tztime New Zealand/NSW %H:%M:%S} ${time %p}${font}
 ${lua imlib_clock grey 130 71 490 4 12}
 
 
