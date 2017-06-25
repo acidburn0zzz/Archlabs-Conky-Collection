@@ -1,38 +1,39 @@
 --[[
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+################################################################################
+
 
 #=====================================================================================
 #                               ArchLabs
-# Date    : 27/05/2017
+# Date    : 25/06/2017
 # Author  : Erik Dubois at http://www.erikdubois.be
 # Version : v1.0.0
 # License : Distributed under the terms of GNU GPL version 2 or later
 # Documentation : http://erikdubois.be/category/linux/aureola/
 #=====================================================================================
-# Conky is based on
-#                               aureola
-# Date    : 15/03/2017
-# Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.9.1
-# License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
-#======================================================================================
 
-#======================================================================================
-#                               
-# Source : Jesse Avalos Google+
-#
-#======================================================================================
-
-# You need not only install conky but also a package that supports lua on your computer
-# Depending on your HARDWARE you should choose wisely in the AUR
-# My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
-
-# To avoid copyright infringements you will have to download and install fonts yourself.
-# Reboot to load the new fonts.
-# http://www.dafont.com/distortion-dos-digital.font
-# 
-# In the folder lua/bars.lua you will have to change the name of your ethernet or wireless card
-# Find it with ifconfig
 
 ]]
 
@@ -56,11 +57,11 @@ conky.config = {
 
 	--alignment = 'middle_middle',
 	alignment = 'top_right',
-	gap_x = 00,
-	gap_y = 40,
-	minimum_height = 210,
-	minimum_width = 210,
-	maximum_width = 210,
+	gap_x = 50,
+	gap_y = 80,
+	minimum_height = 250,
+	minimum_width = 250,
+	maximum_width = 250,
 
 	--Graphical
 
@@ -100,12 +101,12 @@ conky.config = {
 	--Windows
 
 	own_window = true,
-	own_window_argb_value = 50,
+	own_window_argb_value = 0,
 	own_window_argb_visual = true,
 	own_window_class = 'Conky',
 	own_window_colour = '#000000',
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-	own_window_transparent = no,
+	own_window_transparent = tes,
 	own_window_title = 'system_conky',
 	own_window_type = 'normal',-- # options are: normal/override/dock/desktop/panel
 	
@@ -126,17 +127,17 @@ conky.config = {
 	color9 = '#F1544B',  --firebrick
 
 	--Lua
-	lua_load = '~/.config/conky/lua/bars.lua',
-	lua_draw_hook_pre = 'main_bars',
+	lua_load = '~/.config/conky/lua/imlib_clock.lua',
+
 };
 
 
 conky.text = [[
-${offset 00}${voffset 0}${font Distortion Dos Digital:size=16}${color3}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${color2}${offset 00}${voffset 0}${font Noto Sans:size=8:regular}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
-${color1}${offset 19}${voffset 0}${font Noto Sans:size=8:regular}${color1}Kernel : ${color2}${kernel}${offset 00}${voffset 0}${alignr}${color2}${offset 00}${voffset 0}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}${color}
-${color1}${offset 19}${cpubar cpu0 10,110}${color1} Cpu ${alignr}${if_match ${cpu cpu0} > 80}${color9}${else}${if_match ${cpu cpu0} > 50}${color8}${else}${color2}${endif}${endif}${cpu cpu0}%${color}
-${color1}${offset 19}${cpugraph 10,110 aaaaaa ffffff  -t} Cpu History${color}
-${color1}${offset 19}${membar 10,110} Mem ${color2}${alignr}${if_match ${memperc} > 80}${color9}${else}${color6}${endif}${color2}${memperc}%${color}
+${voffset 24}${offset 150}${font Roboto Condensed:size=12}${color 616161}Belgium${font}
+${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color 616161}${time %A}${font}
+${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color 616161}${time %e}.${time %m}.${time %Y}${font}
+${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color 8D8D8D}${time %H:%M:%S} ${time %p}${font}
+${lua imlib_clock grey 130 71 70}
 
-${color2}${offset 15}${voffset 140}${font Noto Sans:size=8}CPU1 CPU2  Mem  HDD DOWN  UP
 ]]
+
