@@ -1,38 +1,32 @@
 --[[
-
 #=====================================================================================
-#                               ArchLabs
-# Date    : 27/05/2017
-# Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.0.0
-# License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
-#=====================================================================================
-# Conky is based on
-#                               aureola
-# Date    : 15/03/2017
-# Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.9.1
-# License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
-#======================================================================================
-
-#======================================================================================
 #                               
-# Source : Jesse Avalos Google+
+# Date    : 02/07/2017
+# Author  : Erik Dubois
+# Source  : Jesse Avalos Google+
+# Version : v2.0.1
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
 #
-#======================================================================================
-
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#=====================================================================================
+# LUA 
 # You need not only install conky but also a package that supports lua on your computer
 # Depending on your HARDWARE you should choose wisely in the AUR
 # My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
-
+#=====================================================================================
+# FONTS
 # To avoid copyright infringements you will have to download and install fonts yourself.
 # Reboot to load the new fonts.
+#=====================================================================================
 # http://www.dafont.com/distortion-dos-digital.font
-# 
+#=====================================================================================
 # In the folder lua/bars.lua you will have to change the name of your ethernet or wireless card
 # Find it with ifconfig
+#=====================================================================================
 
 ]]
 

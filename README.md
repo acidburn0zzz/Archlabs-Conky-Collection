@@ -1,5 +1,10 @@
 # ArchLabs-Conky-New-Syntax
 
+Updated on 
+
+Date    : 02/07/2017
+Version : v2.0.1
+
 Destination : 
 
 content of this github needs to be placed in  (including images folder)

@@ -1,10 +1,10 @@
 --[[
 #=====================================================================================
 #                               
-# Date    : 01/07/2017
+# Date    : 02/07/2017
 # Author  : http://nixiepro.deviantart.com
 # Editor  : Erik Dubois
-# Version : v2.0.0
+# Version : v2.0.1
 # License : Distributed under the terms of GNU GPL version 2 or later
 #=====================================================================================
 # For commands in conky.config section:
@@ -13,10 +13,11 @@
 # For commands in conky.text section:
 # http://conky.sourceforge.net/variables.html
 #=====================================================================================
-
-
-
-
+# LUA 
+# You need not only install conky but also a package that supports lua on your computer
+# Depending on your HARDWARE you should choose wisely in the AUR
+# My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
+#======================================================================================
 ]]
 
 conky.config = {

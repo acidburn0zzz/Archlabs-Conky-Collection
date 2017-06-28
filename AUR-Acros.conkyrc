@@ -1,13 +1,18 @@
 --[[
 #=====================================================================================
-#                               ArchLabs
-# Date    : 01/06/2017
-# Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.0.2
+#                               
+# Date    : 02/07/2017
+# Author  : Erik Dubois
+# Source  : Aureola - https://github.com/erikdubois/Aureola
+# Version : v2.0.1
 # License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
-#======================================================================================
-
+#=====================================================================================
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#=====================================================================================
 ]]
 
 conky.config = {

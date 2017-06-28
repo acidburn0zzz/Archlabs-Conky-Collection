@@ -1,14 +1,22 @@
 --[[
 #=====================================================================================
 #                               
-# Date    : 20/05/2017
+# Date    : 02/07/2017
 # Author  : Adhi Pambudi - https://plus.google.com/u/0/+AdhiPambudi
-# Version : v1.0.0
+# Editor  : Erik Dubois
+# Version : v2.0.1
 # License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#=====================================================================================
 #
 # Readme from Adhi Pambudi
 #
-# These conky configs tested in ARCHLabs 4.0 (Conky version 1.10)
+# These conky configs tested in ArchLabs (Conky version 1.10)
 
 # How to use
 #1. make sure you have curl and jq packages. Install it via terminal and type 'sudo pacman -S curl jq'
@@ -53,8 +61,8 @@ mpd_port = 6600,
 -------------------------------------
 --  Window Specifications
 -------------------------------------
-gap_x=10,
-gap_y=20,
+gap_x=15,
+gap_y=50,
 
 minimum_height=700,
 minimum_width=200,
@@ -63,11 +71,11 @@ alignment = 'top_right',
 
 own_window=true,
 own_window_type="normal",
-own_window_transparent=true,
+own_window_transparent=false,
 own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
 own_window_class = 'Conky',
-own_window_argb_visual=false,
-own_window_argb_value=0,
+own_window_argb_visual=true,
+own_window_argb_value=100,
 double_buffer = true,
 draw_shades = false,
 default_shade_color = '#000000',

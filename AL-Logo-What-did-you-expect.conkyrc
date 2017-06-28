@@ -1,11 +1,39 @@
 --[[
 #=====================================================================================
-#                               ARCHLabs
-# Date    : 01/04/2017
+#                               ArchLabs
+# Date    : 02/07/2017
 # Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.0.0
+# Version : v2.0.1
 # License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
+# Documentation : http://erikdubois.be
+#======================================================================================
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#======================================================================================
+# Source   : Erik Dubois
+#======================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download and install fonts yourself.
+# Reboot to load the new fonts.
+#=====================================================================================
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name and change the text here in the conky
+# The name will be known with fc-list | grep "part of name"
+# Change width and height according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+# Bootcamp font : https://befonts.com/bootcamp-font.html
+# Inked-out font : http://www.dafont.com/inked-out.font
+# Stya font : http://www.dafont.com/stya.font
+# Space age font : http://www.dafont.com/space-age.font
+# Quantify font : https://befonts.com/download/quantify-v2
+# Jedi font : http://www.dafont.com/star-jedi.font
+# REBOOT AFTER INSTALLING THE FONT
 #======================================================================================
 
 
@@ -30,15 +58,15 @@ conky.config = {
 
 	--Placement
 
-	alignment = 'middle_middle',				-- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
-												-- middle-left,middle-middle,middle-right,none
+	alignment = 'middle_middle',				-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+												-- middle_left,middle_middle,middle_right,none
 	--Arch Duoscreen
 	--gap_x = -1910,
 	gap_x = 0,									-- pixels between right or left border
 	gap_y = 0,									-- pixels between bottom or left border
 	minimum_height = 200,						-- minimum height of window
-	minimum_width = 200,						-- minimum height of window
-	maximum_width = 200,						-- maximum height of window
+	minimum_width = 300,						-- minimum height of window
+	maximum_width = 300,						-- maximum height of window
 
 	--Graphical
 
@@ -111,12 +139,21 @@ conky.config = {
 
 conky.text = [[
 #${image $HOME/.config/conky/images/flatALlogo.png -s 100x100 -p 50,0}
-${image $HOME/.config/conky/images/archlabs.png -s 100x100 -p 50,0}
+${image $HOME/.config/conky/images/archlabs.png -s 130x130 -p 90,0}
 
 
 
 
 
-${color1}${font Droid Sans:size=13:regular}${alignc}What did you expect${font}
+
+${color1}${font Inked out:size=6:regular}${alignc}What did you expect${font}
+${color1}${font Bootcamp:size=16:regular}${alignc}What did you expect${font}
+${color1}${font Quantify:size=16:regular}${alignc}What did you expect${font}
+${color1}${font Stya:size=16:regular}${alignc}What did you expect${font}
+${color1}${font Space Age:size=12:regular}${alignc}What did you expect${font}
+${color1}${font Star Jedi Outline:size=16:regular}${alignc}What did you expect${font}
+${color1}${font StarJedi Special Edition:size=16:regular}${alignc}What did you expect${font}
+${color1}${font StarJedi:size=16:regular}${alignc}What did you expect${font}
+${color1}${font Droid Sans:size=16:regular}${alignc}What did you expect${font}
 
 ]];

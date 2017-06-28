@@ -1,19 +1,18 @@
 --[[
 #=====================================================================================
-#                               aureola
-# Date    : 15/03/2017
-# Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.9.1
-# License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
-#======================================================================================
-
-#======================================================================================
 #                               
-# Source : Daniel Zet Google+
+# Date    : 02/07/2017
+# Author  : Erik Dubois
+# Source  : Daniel Zet Google+
+# Version : v2.0.1
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
 #
-#======================================================================================
-
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#=====================================================================================
 ]]
 
 conky.config = {

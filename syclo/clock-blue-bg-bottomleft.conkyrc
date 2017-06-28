@@ -21,7 +21,7 @@ own_window_transparent = true,
 own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
 own_window_colour = '#000000',
 own_window_class = 'Conky',
-own_window_title = 'ARCHLabs Top Conky',
+own_window_title = 'ArchLabs Top Conky',
 --## ARGB can be used for real transparency
 --## NOTE that a composite manager is required for real transparency.
 --## This option will not work as desired (in most cases) in conjunction with

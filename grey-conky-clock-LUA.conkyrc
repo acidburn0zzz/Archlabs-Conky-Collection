@@ -1,40 +1,23 @@
 --[[
-# Conky, a system monitor, based on torsmo
-#
-# Any original torsmo code is licensed under the BSD license
-#
-# All code written since the fork of torsmo is licensed under the GPL
-#
-# Please see COPYING for details
-#
-# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
-# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
-# All rights reserved.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-################################################################################
-
-
 #=====================================================================================
-#                               ArchLabs
-# Date    : 25/06/2017
-# Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.0.0
+#                               
+# Date    : 02/07/2017
+# Author  : http://nixiepro.deviantart.com
+# Editor  : Erik Dubois
+# Version : v2.0.1
 # License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
 #=====================================================================================
-
-
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#=====================================================================================
+# LUA 
+# You need not only install conky but also a package that supports lua on your computer
+# Depending on your HARDWARE you should choose wisely in the AUR
+# My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
+#======================================================================================
 ]]
 
 conky.config = {

@@ -1,15 +1,25 @@
 --[[
 #=====================================================================================
-#                               ARCHLabs
-# Date    : 26/05/2017
+#                               ArchLabs
+# Date    : 02/07/2017
 # Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v1.0.0
+# Version : v2.0.1
 # License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
+# Documentation : http://erikdubois.be/
 #======================================================================================
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download and install fonts yourself.
+# Reboot to load the new fonts.
+#=====================================================================================
 # Go and look for a nice font on sites like http://www.dafont.com/
 # Download and unzip - double click the font to install it (font-manager must be installed)
-# No font-manager but fonts in ~/.fonts
+# No font-manager then put fonts in ~/.fonts
 # Change the font name and change the text here in the conky
 # The name will be known with fc-list | grep "part of name"
 # Change width and height according to font
@@ -45,8 +55,8 @@ conky.config = {
 
 	--Placement
 
-	alignment = 'middle_middle',				-- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
-												-- middle-left,middle-middle,middle-right,none
+	alignment = 'middle_middle',				-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+												-- middle_left,middle_middle,middle_right,none
 	--Arch Duoscreen
 	--gap_x = -1910,
 	gap_x = 0,									-- pixels between right or left border
@@ -125,13 +135,13 @@ conky.config = {
 };
 
 conky.text = [[
-#${color1}${font Inked out:size=18:regular}       ARCHLabs Yoda${font}
-#${color2}${font Inked out:size=16:regular}What did you expect?${font}
-${color1}${font Bootcamp:size=100:regular}   ArchLabs  Yoda${font}
+#${color1}${font Inked out:size=18:regular}       ArchLabs R2-D2${font}
+#${color2}${font Inked out:size=16:regular}    ArchLabs R2-D2${font}
+${color1}${font Bootcamp:size=100:regular}   ArchLabs  R2-D2${font}
 #${color1}${font Quantify:size=80:regular}   ArchLabs${font}
-#${color1}${font Stya:size=55:regular}         ARCHLabs  Yoda${font}
-#${color1}${font Space Age:size=55:regular}  ARCHLabs  Yoda${font}
-#${color1}${font Star Jedi Outline:size=55:regular}   ARCHLabs Yoda${font}
-#${color1}${font StarJedi Special Edition:size=55:regular}   ARCHLabs Yoda${font}
-#${color1}${font StarJedi:size=55:regular}   ARCHLabs Yoda${font}
+#${color1}${font Stya:size=55:regular}         ArchLabs  R2-D2${font}
+#${color1}${font Space Age:size=55:regular}  ArchLabs  R2-D2${font}
+#${color1}${font Star Jedi Outline:size=55:regular}   ArchLabs R2-D2${font}
+#${color1}${font StarJedi Special Edition:size=55:regular}   ArchLabs R2-D2${font}
+#${color1}${font StarJedi:size=55:regular}   ArchLabs R2-D2${font}
 ]];
