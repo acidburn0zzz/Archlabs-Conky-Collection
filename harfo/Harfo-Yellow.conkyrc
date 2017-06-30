@@ -191,10 +191,10 @@ ${voffset 4}${alignr 30}${top_mem mem_res 3}
 ${voffset 4}${alignr 30}${top_mem mem_res 4}
 ${voffset 4}${alignr 30}${top_mem mem_res 5}${color}${font}
 \
-${if_existing /proc/net/route wlx0015af414869}${font}
-${voffset 2}${goto 10}Up : ${upspeed wlx0015af414869} ${goto 135}Down : ${downspeed wlx0015af414869}
-${voffset 8}${goto 10}${upspeedgraph wlx0015af414869 26,100} ${goto 121}${downspeedgraph wlx0015af414869 26,100}
-${voffset 9}${goto 10}Sent : ${totalup wlx0015af414869} ${goto 132}Received : ${totaldown wlx0015af414869}${color}
+${if_existing /proc/net/route wlp3s0}${font}
+${voffset 2}${goto 10}Up : ${upspeed wlp3s0} ${goto 135}Down : ${downspeed wlp3s0}
+${voffset 8}${goto 10}${upspeedgraph wlp3s0 26,100} ${goto 121}${downspeedgraph wlp3s0 26,100}
+${voffset 9}${goto 10}Sent : ${totalup wlp3s0} ${goto 132}Received : ${totaldown wlp3s0}${color}
 ${else}
 ${voffset 99}${goto 10}Network : Disconnected${color}
 ${image ~/.config/conky/harfo/images/off.png -p 170,590 -s 40x40}
@@ -205,9 +205,9 @@ ${image ~/.config/conky/harfo/images/on-yellow.png -p 170,590 -s 40x40}
 ${image ~/.config/conky/harfo/images/yellow-on.png -p 2,72 -s 224x83}
 ${endif}
 \
-${voffset -35}${goto 10}SSID : ${wireless_essid wlx0015af414869}
-${voffset 4}${goto 10}Speed : ${wireless_bitrate wlx0015af414869}
-${voffset 4}${goto 10}Signal : ${wireless_link_qual_perc wlx0015af414869} %
+${voffset -35}${goto 10}SSID : ${wireless_essid wlp3s0}
+${voffset 4}${goto 10}Speed : ${wireless_bitrate wlp3s0}
+${voffset 4}${goto 10}Signal : ${wireless_link_qual_perc wlp3s0} %
 ${voffset -100}
 ##========================== Regards, Etles_Team =========================##
 ]];
