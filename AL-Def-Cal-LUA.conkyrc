@@ -3,7 +3,7 @@
 #                               ArchLabs
 # Date    : 02/07/2017
 # Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v2.0.1
+# Version : v2.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 # Documentation : http://erikdubois.be
 #======================================================================================
@@ -50,7 +50,7 @@ conky.config = {
 	--gap_x = -1910,
 	gap_x = 20,									-- pixels between right or left border
 	gap_y = 60,									-- pixels between bottom or left border
-	minimum_height = 200,						-- minimum height of window
+	minimum_height = 700,						-- minimum height of window
 	minimum_width = 200,						-- minimum height of window
 	maximum_width = 200,						-- maximum height of window
 
@@ -92,7 +92,7 @@ conky.config = {
 	--Windows
 
 	own_window = true,							-- create your own window to draw
-	own_window_argb_value = 100,			    -- real transparency - composite manager required 0-255
+	own_window_argb_value = 0,			    -- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,				-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
 	own_window_colour = '#000000',				-- set colour if own_window_transparent no
@@ -106,7 +106,7 @@ conky.config = {
 
 	default_color = '#C0C0C0',  				-- default color and border color
 	color0 = '#B0E0E6', 
-	color1 = '#778899', 
+	color1 = '#5393BF', 
 	color2 = '#D8BFD8', 
 	color3 = '#cccccc', 
 	color4 = '#BDBDBD',
@@ -121,15 +121,15 @@ conky.config = {
 
 	--Lua
 	lua_load = '$HOME/.config/conky/lua/draw-bg.lua',
-	lua_draw_hook_pre = 'draw_bg 15 0 0 0 0 0x656667 0.35',
+	lua_draw_hook_pre = 'draw_bg 15 0 0 0 0 0x101010 0.5',
 
 };
 
 conky.text = [[
 ${font Monospace:bold:size=10}${alignc}${color5}${time %X}
 ${goto 27}${color1}${execpi 7200 LAR=`date +%-d`; cal -1 -s | sed 's/\<'$LAR'\>/${color5}&${color1}/' | sed ':a;N;$!ba;s/\n/\n${goto 27}/g'}${color}${font}
-${alignc}S Y S T E M    I N F O
-${hr}
+${color5}${alignc}S Y S T E M    I N F O
+${hr}${color}
 Host:${alignr}${nodename}
 Uptime:${alignr}${uptime}
 #Time:${alignr}${time %H:%M}

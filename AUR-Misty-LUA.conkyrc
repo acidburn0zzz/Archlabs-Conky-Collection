@@ -4,7 +4,7 @@
 # Date    : 02/07/2017
 # Author  : Erik Dubois
 # Source  : Jesse Avalos Google+
-# Version : v2.0.1
+# Version : v2.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 #=====================================================================================
 # For commands in conky.config section:
@@ -50,8 +50,8 @@ conky.config = {
 
 	--alignment = 'middle_middle',
 	alignment = 'top_right',
-	gap_x = 00,
-	gap_y = 40,
+	gap_x = 20,
+	gap_y = 50,
 	minimum_height = 210,
 	minimum_width = 210,
 	maximum_width = 210,

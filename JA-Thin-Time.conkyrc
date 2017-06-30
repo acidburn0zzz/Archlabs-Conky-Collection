@@ -4,7 +4,7 @@
 # Date    : 02/07/2017
 # Author  : Jesse_Avalos , See me on Eye Candy Linux_  on Google +
 # Editor  : Erik Dubois
-# Version : v2.0.1
+# Version : v2.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 #=====================================================================================
 # For commands in conky.config section:
@@ -89,7 +89,7 @@ conky.config = {
 	own_window_class = 'Conky',
 	own_window_colour = '#000000',
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-	own_window_transparent = tes,
+	own_window_transparent = false,
 	own_window_title = 'system_conky',
 	own_window_type = 'normal',-- # options are: normal/override/dock/desktop/panel
 	

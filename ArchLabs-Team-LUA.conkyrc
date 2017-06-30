@@ -4,7 +4,7 @@
 # Date    : 02/07/2017
 # Author  : http://nixiepro.deviantart.com
 # Editor  : Erik Dubois
-# Version : v2.0.1
+# Version : v2.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 #=====================================================================================
 # For commands in conky.config section:
@@ -122,14 +122,14 @@ ${voffset 20}${offset 150}${font Roboto Condensed:size=12}${color1}Canada${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${tztime Canada/Pacific %A}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${tztime Canada/Pacific %e.%m.%Y}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color2}${tztime Canada/Pacific %H:%M:%S} ${time %p}${font}
-${lua imlib_clock grey 130 71 210 -10}
+#${lua imlib_clock grey 130 71 70 -10}
 
 ${voffset 24}${offset 150}${font Roboto Condensed:size=12}${color1}Belgium${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${time %A}${font}
 #${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${time %e}.${time %m}.${time %Y}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${tztime Europe/Brussels %e.%m.%Y}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color2}${tztime Europe/Brussels %H:%M:%S} ${time %p}${font}
-${lua imlib_clock grey 130 71 70 2 0}
+${lua imlib_clock grey 130 71 210 2 0}
 
 
 ${voffset 24}${offset 150}${font Roboto Condensed:size=12}${color1}India${font}
@@ -137,17 +137,15 @@ ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${time %A}${fo
 #${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${time %e}.${time %m}.${time %Y}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${tztime Asia/Calcutta %e.%m.%Y}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color2}${tztime Asia/Calcutta %H:%M:%S} ${time %p}${font}
-${lua imlib_clock grey 130 71 350 3 4}
+#${lua imlib_clock grey 130 71 350 3 4}
 
 
-${voffset 24}${offset 150}${font Roboto Condensed:size=12}${color1}Australia${font}
+${voffset 24}${offset 150}${font Roboto Condensed:size=12}${color1}New Zealand${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${time %A}${font}
 #${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${time %e}.${time %m}.${time %Y}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color1}${tztime NZ %e.%m.%Y}${font}
 ${voffset 2}${offset 150}${font Roboto Condensed:size=12}${color2}${tztime NZ %H:%M:%S} ${time %p}${font}
-${lua imlib_clock grey 130 71 490 4 12}
-
-
+#${lua imlib_clock grey 130 71 490 4 12}
 
 
 ]]
