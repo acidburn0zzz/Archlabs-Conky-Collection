@@ -150,7 +150,7 @@ ${color2}${font Poky:pixelsize=9}H ${color1}${font }CENTRAL PROCESSING UNIT ${co
 ${font }CPU TOTAL USAGE: ${alignr 10}${cpu cpu0}%
 
 ${font }CPU HISTORY:
-${color1}${cpugraph 20,230 -t}
+${color1}${cpugraph 20,230 cdbf9a cdbf9a}
 ${freq cpu1}MHz 
 ${font }${cpu cpu1}%${goto 45} ${color4}${cpubar 8,195 cpu1}${color2}${font }
 ${font }${cpu cpu2}%${goto 45} ${color4}${cpubar 8,195 cpu2}${color2}${font }
