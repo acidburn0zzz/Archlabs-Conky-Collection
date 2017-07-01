@@ -7,25 +7,43 @@
 # Version : v2.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 #=====================================================================================
+# CONKY
 # For commands in conky.config section:
 # http://conky.sourceforge.net/config_settings.html
 #
 # For commands in conky.text section:
 # http://conky.sourceforge.net/variables.html
+# 
+# A PDF with all variables is provided
 #=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download 
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#======================================================================================
 #
 # Readme from Adhi Pambudi
 #
 # These conky configs tested in ArchLabs (Conky version 1.10)
 
 # How to use
-#1. make sure you have curl and jq packages. Install it via terminal and type 'sudo pacman -S curl jq'
-#2. make sure you have roboto font. Install it via terminal 'sudo pacman -S ttf-roboto'
-#3. edit one of the conky files that you want to use, replace the variables.
-#4. to get an API Key, first you have to sign up here https://openweathermap.org/appid
-#5. find your city id here http://openweathermap.org/help/city_list.txt
-#6. after you replace those variables with your own, save.
-#7. open the conky chooser, tick your edited conkyrc, then press OK.
+# edit one of the conky files that you want to use, replace the variables.
+# to get an API Key, first you have to sign up here https://openweathermap.org/appid
+# find your city id here http://openweathermap.org/help/city_list.txt
+# after you replace those variables with your own, save.
+# open the conky chooser, tick your edited conkyrc, then press OK.
 
 # Credits
 #1. zagortenay333 for Jelly Conky

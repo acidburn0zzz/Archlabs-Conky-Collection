@@ -7,23 +7,38 @@
 # Version : v2.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 #=====================================================================================
+# CONKY
 # For commands in conky.config section:
 # http://conky.sourceforge.net/config_settings.html
 #
 # For commands in conky.text section:
 # http://conky.sourceforge.net/variables.html
+# 
+# A PDF with all variables is provided
 #=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download 
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# http://www.dafont.com/distortion-dos-digital.font
+#======================================================================================
 # LUA 
 # You need not only install conky but also a package that supports lua on your computer
 # Depending on your HARDWARE you should choose wisely in the AUR
 # My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
 #=====================================================================================
-# FONTS
-# To avoid copyright infringements you will have to download and install fonts yourself.
-# Reboot to load the new fonts.
-#=====================================================================================
-# http://www.dafont.com/distortion-dos-digital.font
-#=====================================================================================
+# LUA INFO
 # In the folder lua/bars.lua you will have to change the name of your ethernet or wireless card
 # Find it with ifconfig
 #=====================================================================================
