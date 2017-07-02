@@ -100,11 +100,11 @@ color5='FFFFFF', -- days
 -------------------------------------
 --  Icon Sources
 -------------------------------------
-template0='~/.config/conky/conky-vision/.conky-vision-icons/#fff__32',  --  today
-template1='~/.config/conky/conky-vision/.conky-vision-icons/#fff__32',  --  +1day
-template2='~/.config/conky/conky-vision/.conky-vision-icons/#fff__32',  --  +2days
-template3='~/.config/conky/conky-vision/.conky-vision-icons/#fff__32',  --  +3days
-template4='~/.config/conky/conky-vision/.conky-vision-icons/#fff__32',  --  +4days
+template0='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  today
+template1='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +1day
+template2='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +2days
+template3='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +3days
+template4='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +4days
 
 
 -------------------------------------
