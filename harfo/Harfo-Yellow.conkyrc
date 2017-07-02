@@ -154,8 +154,8 @@ ${image ~/.config/conky/harfo/images/separator-v.png -p 114,473 -s 1x95}\
 \
 ${voffset 20}${font Droid Sans :size=11}${alignc 10}${color}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${font}${color}
 ${voffset 6}${font Droid Sans :size=10}${alignc 10}Kernel : ${kernel}${font}${color}
-${voffset 3}${goto 25}${font Decker :size=50}${color1}${time %H:%M}${font}
-${voffset 1}${goto 50}${font Decker :size=15}${time %b %d} on ${time %a}${font}${color}
+${voffset 6}${goto 25}${font Droid Sans :size=50}${color1}${time %H:%M}${font}
+${voffset 1}${goto 50}${font Droid Sans :size=15}${time %b %d} on ${time %a}${font}${color}
 \
 ${voffset 14}${goto 10}Cpu :${color}
 ${voffset 4}${goto 10}Mem :${color}
