@@ -150,14 +150,14 @@ ${image $HOME/.config/conky/images/archlabs.png -s 130x130 -p 90,0}
 
 
 
-${color1}${font Inked out:size=6:regular}${alignc}What did you expect${font}
+#${color1}${font Inked out:size=6:regular}${alignc}What did you expect${font}
 ${color1}${font Bootcamp:size=16:regular}${alignc}What did you expect${font}
-${color1}${font Quantify:size=16:regular}${alignc}What did you expect${font}
-${color1}${font Stya:size=16:regular}${alignc}What did you expect${font}
-${color1}${font Space Age:size=12:regular}${alignc}What did you expect${font}
-${color1}${font Star Jedi Outline:size=16:regular}${alignc}What did you expect${font}
-${color1}${font StarJedi Special Edition:size=16:regular}${alignc}What did you expect${font}
-${color1}${font StarJedi:size=16:regular}${alignc}What did you expect${font}
-${color1}${font Droid Sans:size=16:regular}${alignc}What did you expect${font}
+#${color1}${font Quantify:size=16:regular}${alignc}What did you expect${font}
+#${color1}${font Stya:size=16:regular}${alignc}What did you expect${font}
+#${color1}${font Space Age:size=12:regular}${alignc}What did you expect${font}
+#${color1}${font Star Jedi Outline:size=16:regular}${alignc}What did you expect${font}
+#${color1}${font StarJedi Special Edition:size=16:regular}${alignc}What did you expect${font}
+#${color1}${font StarJedi:size=16:regular}${alignc}What did you expect${font}
+#${color1}${font Droid Sans:size=16:regular}${alignc}What did you expect${font}
 
 ]];
