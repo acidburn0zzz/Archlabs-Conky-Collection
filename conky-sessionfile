@@ -1,2 +1,1 @@
 conky -c ~/.conkyrc & sleep 1s
-conky -c ~/.config/conky/syclo/clock-orange-bg-topleft.conkyrc & sleep 1s
