@@ -111,7 +111,7 @@ conky.config = {
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
 	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
-	own_window_type = 'desktop',				    -- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
 	
 
 	--Colours
@@ -136,7 +136,7 @@ conky.config = {
 
 
 conky.text = [[
-${image ~/.config/conky/images/archlabs.png -p 170,0 -s 60x60  -f 5}
+${image ~/.config/conky/images/archlabs-white.png -p 170,0 -s 50x50}
 ${color1}${font SourceSansPro-ExtraLight:size=18:weight:bold}${color2}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}
 ${color1}${hr 2}
 ${voffset -10}${color1}${font SourceSansPro-ExtraLight:size=10:weight:bold:italic}${color6}$sysname $kernel ${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
