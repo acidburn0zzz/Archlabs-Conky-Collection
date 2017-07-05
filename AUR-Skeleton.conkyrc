@@ -85,7 +85,7 @@ conky.config = {
 	
 	extra_newline = false,
 	format_human_readable = true,
-	font = 'Sans Mono:size=9:oblique',
+	font = 'Sans Mono:size=9',
 	max_text_width = 0,
 	max_user_text = 16384,
 	override_utf8_locale = true,
