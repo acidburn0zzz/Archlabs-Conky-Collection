@@ -116,7 +116,7 @@ conky.config = {
 
 	--Colours
 
-	default_color = '#C0C0C0',  				-- default color and border color
+	default_color = '#FFFFFF',  				-- default color and border color
 	color1 = '#FFFFFF', 
 	color2 = '#AAAAAA', 
 	color3 = '#cccccc', 
