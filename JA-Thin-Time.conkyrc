@@ -31,7 +31,7 @@
 # Enjoy
 #=====================================================================================
 # FONTS FOR THIS CONKY
-# packer ephifonts
+# no fonts needed
 #=====================================================================================
 # LUA 
 # You need not only install conky but also a package that supports lua on your computer
