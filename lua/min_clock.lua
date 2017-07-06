@@ -35,10 +35,10 @@ clock_table = {
         text_color   = {0xFFFFFF, 1},       -- color of numbers
         -- font settings
         -- specify the font as font:face, where face is bold, italic, bolditalic
-        hour_font = "lato",  -- font face for hours
-        min_font  = "lato",  -- font face for minutes
-        day_font  = "lato",  -- font face for day and time period
-        hour_font_size = 100,  -- font size for hours
+        hour_font = "noto",  -- font face for hours
+        min_font  = "noto",  -- font face for minutes
+        day_font  = "noto",  -- font face for day and time period
+        hour_font_size = 75,  -- font size for hours
         min_font_size  = 18,   -- font size for minutes
         day_font_size  = 24,   -- font size for day and period
 }
