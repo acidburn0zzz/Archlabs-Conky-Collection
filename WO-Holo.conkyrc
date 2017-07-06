@@ -1,0 +1,108 @@
+
+-- conky new syntax
+-- does not work with Conky Manager
+
+conky.config = {
+	background = true,
+	update_interval = 1,
+	total_run_times = 0,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	cpu_avg_samples = 1,
+	net_avg_samples = 1,
+
+	text_buffer_size = 1024,
+	imlib_cache_size = 0,
+
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_transparent = false,
+	own_window_argb_visual = false,
+	own_window_argb_value = 0,
+	own_window_colour = '#2A373E',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = true,
+	draw_graph_borders = false,
+
+	border_inner_margin = 10,
+	border_outer_margin = 1,
+
+	minimum_width = 300, minimum_height = 500,
+	maximum_width = 300,
+
+	alignment = 'top_left',
+	gap_x = 40,
+	gap_y = 60,
+
+
+	use_xft = true,
+	override_utf8_locale = true,
+	font = 'Sans:size=10',
+	xftalpha = 1,
+	uppercase = false,
+	use_spacer = 'none',
+
+	default_color = '00BCD4',
+	default_outline_color = 'white',
+	color1 = '#eaffff',
+	color2 = 'gold',
+	color3 = '#ffffff',--cornflowerblue
+	color4 = '00BCD4',
+	color5 = '00BCD4',
+	color6 = 'yellow',
+
+	format_human_readable = true,
+	short_units = true,
+	pad_percents = 2,
+
+	lua_load = '$HOME/.config/conky/lua/widget_rings.lua',
+	lua_draw_hook_post = 'main_rings',
+
+};
+
+conky.text = [[
+${font Sans:size=8}${color3}OS: ${color2}${alignr}${execi 10000 lsb_release -d | cut -f 2| tr "[:upper:]" "[:upper:]"}
+${color3}Kernel: ${color2}${alignr}${kernel}
+${color3}Uptime:${color2}${alignr}${uptime}
+
+${voffset -10}${color5}CPU ${hr}
+${voffset 5}${color3}Freq: ${goto 65}${color2}${freq_g} GHz
+
+${color3}CPU1: ${goto 65}${color2}${cpu cpu1}%
+${goto 65}${exec sensors|grep 'Core 0'|awk '{print $3}'}
+${color3}CPU2: ${goto 65}${color2}${cpu cpu2}%
+${goto 65}${exec sensors|grep 'Core 1'|awk '{print $3}'}
+${color3}Tasks: ${color2}${goto 65}${processes}
+${color3}Running: ${color2}${goto 65}${running_processes}
+${voffset -48}${goto 150}${color4}Core 1 ${goto 250}Core 2
+
+${voffset 30}${color4}NET: ${hr}
+${voffset 5}${color3}SSID: ${color2}${wireless_essid wls33}
+${color3}IP: ${color2}${addr wls33}
+${color3}Speed: ${color2}${wireless_bitrate wls33}
+${color3}Signal: ${color2}${wireless_link_qual_perc wls33} %
+${color3}Dw: ${color2}${totaldown wls33}
+${color3}Up:  ${color2}${totalup wls33}
+${voffset -46}${goto 152}${color1}${upspeed wls33}${goto 250}${downspeed wls33}
+${voffset 0}${color4}${goto 150}upload ${goto 240}download
+
+${voffset 20}${color4}PROCESSES ${hr}
+${voffset 5}${color4} NAME${alignr 10}CPU ${alignr}RAM
+${color1} ${top name 1} ${alignr}${top cpu 1} ${alignr}${top mem 1}
+${color1} ${top name 2} ${alignr}${top cpu 2} ${alignr}${top mem 2}
+${color1} ${top name 3} ${alignr}${top cpu 3} ${alignr}${top mem 3}
+${color1} ${top name 4} ${alignr}${top cpu 4} ${alignr}${top mem 4}
+${color1} ${top name 5} ${alignr}${top cpu 5} ${alignr}${top mem 5}
+ ${voffset 5}${color5}DATE & CLOCK ${hr}
+ 
+${color1}${voffset 6}${font Monospace:style=bold:size=9}${execpi 1800 LAR=`date +%-d`; cal -1 -s | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color0}&${color1}/' | sed ':a;N;$!ba;s/\n/\n${goto 28}/g'
+ 
+${goto 204}${voffset -84}${color ff8000}${font Sans:size=12}${time %H}${color 00ff00}${time :%M}${color 6495EE}${time :%S}
+${voffset -45}
+##========================== Regards, Etles_Team ====================================##
+]];
