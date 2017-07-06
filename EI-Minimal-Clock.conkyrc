@@ -1,13 +1,12 @@
 --[[
 #=====================================================================================
-#                               ArchLabs
+#                               
 # Date    : 06/07/2017
-# Author  : Jesse Avalos or http://speedracker.deviantart.com/art/Type-Writer-Conky-432177975
+# Author  : http://nixiepro.deviantart.com
 # Editor  : Erik Dubois
 # Version : v2.1.0
 # License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/
-#======================================================================================
+#=====================================================================================
 # CONKY
 # For commands in conky.config section:
 # http://conky.sourceforge.net/config_settings.html
@@ -32,10 +31,13 @@
 # Enjoy
 #=====================================================================================
 # FONTS FOR THIS CONKY
-# http://www.dafont.com/1942-report.font
+# no extra font(s) needed
 #=====================================================================================
-
-
+# LUA 
+# You need not only install conky but also a package that supports lua on your computer
+# Depending on your HARDWARE you should choose wisely in the AUR
+# My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
+#======================================================================================
 ]]
 
 conky.config = {
@@ -57,20 +59,20 @@ conky.config = {
 
 	--Placement
 
-	alignment = 'middle_middle',				-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+	alignment = 'top_left',     				-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 												-- middle_left,middle_middle,middle_right,none
 	--Arch Duoscreen
 	--gap_x = -1910,
 	gap_x = 0,									-- pixels between right or left border
 	gap_y = 0,									-- pixels between bottom or left border
-	minimum_height = 220,						-- minimum height of window
-	minimum_width = 563,						-- minimum height of window
-	maximum_width = 563,						-- maximum height of window
+	minimum_height = 350,						-- minimum height of window
+	minimum_width = 350,						-- minimum height of window
+	maximum_width = 350,						-- maximum height of window
 
 	--Graphical
 
-	border_inner_margin = 0, 					-- margin between border and text
-	border_outer_margin = 0, 					-- margin between border and edge of window
+	border_inner_margin = 5, 					-- margin between border and text
+	border_outer_margin = 5, 					-- margin between border and edge of window
 	border_width = 0, 							-- border width in pixels
 	default_bar_width = 280,					-- default is 0 - full width					
 	default_bar_height = 10,					-- default is 6
@@ -90,7 +92,7 @@ conky.config = {
 	
 	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
 	format_human_readable = true,				-- KiB, MiB rather then number of bytes
-	font = '1942 report:size=11:oblique',  -- font for complete conky unless in code defined
+	font = 'SourceSansPro-ExtraLight:size=11:oblique',  -- font for complete conky unless in code defined
 	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
 	max_user_text = 16384,						-- max text in conky default 16384
 	override_utf8_locale = true,				-- force UTF8 requires xft
@@ -105,12 +107,12 @@ conky.config = {
 	--Windows
 
 	own_window = true,							-- create your own window to draw
-	own_window_argb_value = 50,				    -- real transparency - composite manager required 0-255
-	own_window_argb_visual = false,				-- use ARGB - composite manager required
+	own_window_argb_value = 10,				    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
 	own_window_colour = '#000000',				-- set colour if own_window_transparent no
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
-	own_window_transparent = true,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
 	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
 	
@@ -132,18 +134,13 @@ conky.config = {
 	
 
 	--Lua
-
+	lua_load = '~/.config/conky/lua/min_clock.lua',
+	lua_draw_hook_pre = 'main',
 
 };
 
-conky.text = [[
-${image ~/.config/conky/images/back-tw.png -p 0,0 -s 560x220}
-${image ~/.config/conky/images/archlabs.png -p 250,85 -s 75x75}
-${voffset 20 }${offset 105 }${font 1942 report:size=14}       Powered By ArchLabs
-${offset 20}${voffset 30}${font 1942 report:size=35}${voffset -50}${color}${time %H:%M}
-${offset 80}${voffset -10}${font 1942 report:size=14}${time %D}
 
-${voffset -80}${offset 420}${font 1942 report:size=14} Cpu ${cpu cpu0}%
-${offset 420}${font 1942 report:size=14}Battery ${battery_percent BATT}% 
-${offset 400}${font 1942 report:size=14}  Mem $mem
-]];
+conky.text = [[
+]]
+
+
