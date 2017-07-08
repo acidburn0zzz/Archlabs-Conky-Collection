@@ -1,12 +1,12 @@
 --[[
 #=====================================================================================
 #                               ArchLabs
-# Date    : 06/07/2017
+# Date    : 08/07/2017
 # Source  : BunsenLabs ellipses by damo <damo@bunsenlabs.org> April 2015
 # converted to conky 1.10 syntax for ArchLabs by: postmaster and Erik Dubois
 # original config borrowed from BunsenLabs with love
 # Editor  : Erik Dubois at http://www.erikdubois.be
-# Version : v2.1.1
+# Version : v2.2.1
 # License : Distributed under the terms of GNU GPL version 2 or later
 # Documentation : http://erikdubois.be/
 #======================================================================================
