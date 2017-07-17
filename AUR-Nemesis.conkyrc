@@ -89,7 +89,7 @@ conky.config = {
 	
 	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
 	format_human_readable = true,				-- KiB, MiB rather then number of bytes
-	font = 'SourceSansPro-ExtraLight:size=11:oblique',  	-- font for complete conky unless in code defined
+	font = 'SourceSansPro-ExtraLight:size=11:bold',  	-- font for complete conky unless in code defined
 	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
 	max_user_text = 16384,						-- max text in conky default 16384
 	override_utf8_locale = true,				-- force UTF8 requires xft
@@ -120,7 +120,7 @@ conky.config = {
 	color1 = '#bbbbbb', 
 	color2 = '#FFFFFF', 
 	color3 = '#9C1220', 
-	color4 = '#BDBDBD',
+	color4 = '#DDDDDD',
 	color5 = '#CCCCCC', 
 	color6 = '#FFA300',
 
@@ -150,9 +150,8 @@ ${color1}Total Processes${alignr}${color6}${processes}
 ${color1}Packages Upgrades${alignr}${color6}${execi 3600 checkupdates | wc -l} 
 ${color1}${hr 2}
 ${font SourceSansPro-ExtraLight size=12:weight:bold}${color1}Cpu  
-${font SourceSansPro-ExtraLight size=8:weight:italic}${color6}${execi 6000 cat /proc/cpuinfo | grep -i 'Model name' -m 1 | cut -c14-43}
-# Showing TOP 5 CPU-consumers
-${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color1}${top name 1}${alignr}${color6}${top cpu 1}%${font}
+${font SourceSansPro-ExtraLight size=8:weight:italic}${color6}${execi 6000 cat /proc/cpuinfo | grep -i 'Model name' -m 1 | cut -c14-43}${font}
+${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color4}${top name 1}${alignr}${color6}${top cpu 1}%${font}
 ${offset 30}${color1}${top name 2}${alignr}${color6}${top cpu 2}%
 ${offset 30}${color1}${top name 3}${alignr}${color6}${top cpu 3}%
 ${offset 30}${color1}${top name 4}${alignr}${color6}${top cpu 4}%
@@ -162,7 +161,7 @@ ${font SourceSansPro-ExtraLight size=12 weight:bold}${color1}CPU Usage over Time
 ${color1}${cpugraph 40,230 FFA300 ffffff  -t}
 ${hr 2}${font}${color}
 ${color5}${font SourceSansPro-ExtraLight:size=12:weight:bold}Memory
-${offset 30}${color1}${top_mem name 1}${alignr}${alignr}${color6}${top_mem mem 1}
+${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color4}${top_mem name 1}${alignr}${alignr}${color6}${top_mem mem 1}${font}
 ${offset 30}${color1}${top_mem name 2}${alignr}${alignr}${color6}${top_mem mem 2}
 ${offset 30}${color1}${top_mem name 3}${alignr}${alignr}${color6}${top_mem mem 3}
 ${offset 30}${color1}${top_mem name 4}${alignr}${alignr}${color6}${top_mem mem 4}
