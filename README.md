@@ -1,9 +1,9 @@
-# ArchLabs-Conky-New-Syntax
+# ArchLabs-Conky
 
 Updated on 
 
-Date    : 02/07/2017
-Version : v2.0.1
+Date    : 17/07/2017
+Version : v2.5.1
 
 Destination : 
 
