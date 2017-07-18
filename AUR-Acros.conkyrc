@@ -1,10 +1,10 @@
 --[[
 #=====================================================================================
 #                               
-# Date    : 17/07/2017
+# Date    : 18/07/2017
 # Author  : Erik Dubois
 # Source  : Aureola - https://github.com/erikdubois/Aureola
-# Version : v2.5.1
+# Version : v2.5.2
 # License : Distributed under the terms of GNU GPL version 2 or later
 #=====================================================================================
 # CONKY
@@ -176,7 +176,7 @@ ${offset 10}${color1}Up ${color1}${upspeed wlan0}${color1}${alignr}${color1}${do
 ${endif}\
 ${color2}Dropbox Status :
 ${if_running dropbox}\
-${alignr}${color6}${execi 5 python2 ~/.config/conky/scripts/acros/dropbox.py status}\
+${alignr}${color6}${execi 5 python2 ~/.config/conky/scripts/AUR-Acros/dropbox.py status}\
 ${else}\
 ${alignr}${color6} Offline\
 ${endif}
